@@ -273,7 +273,7 @@ const handlers = [
           "id": 103530,
           "companyName": "Sonatype",
           "title": "Senior Technical Support Engineer",
-          "companyLogo": "https://interstate21.com/job-search-app/Sonatype.png",
+          "companyLogo": "https://interstate21.com/job-search-app/Sonatype.jpg",
           "reference": "103530-senior-technical-support-engineer"
         },
         {
