@@ -304,7 +304,7 @@ const handlers = [
   }),
 ];
 
-bootstrapApplication(AppComponent, appConfig)
-  .then(() => setupWorker(...handlers).start())
+setupWorker(...handlers).start()
+  .then(() => bootstrapApplication(AppComponent, appConfig))
   .catch((err) => console.error(err));
 
