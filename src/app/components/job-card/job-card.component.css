@@ -46,14 +46,12 @@
 }
 
 .job-info span {
-  /* color: #8998a5; */
   opacity: 0.6;
 }
 .job-info span:nth-of-type(2){
   padding-left: 8px;
 }
 
-/* Favorite Button */
 .btn-favorite {
   border: none;
   background: none;
