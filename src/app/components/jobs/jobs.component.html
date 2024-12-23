@@ -1,0 +1,22 @@
+<div class="container">
+  <header class="header">
+    <h1>Find your job</h1>
+    <nav class="tabs">
+      <a class="tab"
+      [ngClass]="{'active': currentRoute === '/jobs'}"
+      routerLink="/jobs">
+      Jobs
+    </a>
+    <a class="tab"
+      [ngClass]="{'active': currentRoute === '/jobs/favorites'}"
+      routerLink="/jobs/favorites">
+        Favorites
+        <span class="badge" *ngIf="favoriteJobs().length">{{ favoriteJobs().length }}</span>
+      </a>
+    </nav>
+  </header>
+  <section class="main-content">
+    <router-outlet></router-outlet>
+  </section>
+</div>
+

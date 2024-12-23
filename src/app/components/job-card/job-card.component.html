@@ -1,0 +1,20 @@
+<div *ngIf="data" class="job-item" [class.card-selection]="isCompactCard">
+  <div>
+    <img [src]="data.companyLogo" alt="Company Logo" class="company-logo">
+  </div>
+  <div class="job-details">
+    <h3 class="job-title">{{ data.title }}</h3>
+    <p class="job-info">
+      <span>Company: </span> {{ data.companyName }}
+      <span>Reference:</span> {{ data.reference }}
+    </p>
+    <p *ngIf="data.types" class="job-types">
+      <span *ngFor="let type of data.types">{{ type }}</span>
+    </p>
+  </div>
+  <div *ngIf="selection">
+    <button (click)="$event.stopPropagation();toggleFavorite()" class="btn-favorite">
+       <img [src]="data.isFavorite ? 'assets/star.svg' : 'assets/star-outline.svg'">
+   </button>
+  </div>
+</div>

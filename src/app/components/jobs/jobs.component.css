@@ -1,0 +1,73 @@
+/* General Reset */
+
+
+.container {
+  max-width: 960px;
+  margin: 30px auto;
+  background: #edeff4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tab {
+  padding: 16px;
+  background: #ddd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 50%;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for smooth hover */
+
+  &:hover {
+    background-color: #a0b0b1;
+  }
+}
+
+.tab.active {
+  background: #3d4252;
+  color: #fff;
+}
+
+.main-content {
+  max-height: 75vh;
+  overflow: auto;
+  padding: 24px;
+}
+
+
+.badge {
+    padding: 4px 12px;
+    margin-left: 6px;
+    background-color: #433e3e;
+    color: white;
+    font-size: 16px;
+    border-radius: 16px;
+}
+
+.tab.active .badge{
+  background-color: white;
+  color: #433e3e;
+}

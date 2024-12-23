@@ -1,0 +1,6 @@
+.job-list{
+  button {
+    border: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,7 @@
+<div class="job-list">
+  <ng-container *ngIf="listOfAllJobs?.length">
+       <button (click)="showDetails(job)" *ngFor="let job of listOfAllJobs">
+         <app-job-card [data]="job" (toggleJobSelection)="toggleJobSelection($event)"></app-job-card>
+       </button>
+  </ng-container>
+</div>

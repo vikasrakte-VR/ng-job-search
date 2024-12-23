@@ -1,0 +1,12 @@
+<div class="job-list">
+  <ng-container *ngIf="listOfFavoriteJobs?.length; else notFound;">
+       <button (click)="showDetails(job)" *ngFor="let job of listOfFavoriteJobs">
+         <app-job-card [data]="job" [selection]="false"></app-job-card>
+       </button>
+  </ng-container>
+  <ng-template #notFound>
+    <div class="no-job-found">
+      <p>"It seems you don't have any favorite jobs yet. Go ahead and add some!"</p>
+    </div>
+  </ng-template>
+</div>

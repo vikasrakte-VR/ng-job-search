@@ -1,0 +1,26 @@
+<div>
+  <a class="home-button" routerLink="/jobs/all">
+    <img src="assets/home.svg">
+    Home
+  </a>
+</div>
+<article *ngIf="data; else loading">
+  <div class="job-container">
+    <div class="job-card">
+      <app-job-card [data]="data" [selection]="false" [isCompactCard]="false"></app-job-card>
+    </div>
+    <div class="details">
+        <p><strong>Publish date:</strong> {{ data.publishDate | date:'dd/MM/yyyy' }}</p>
+        <p><strong>Location:</strong> {{ data.location }}</p>
+        <p><strong>Industries:</strong> {{ data.industries }} </p>
+    </div>
+
+    <div class="description">
+      <p><strong>Description</strong></p>
+      <div [innerHTML]="jobDescription"></div>
+    </div>
+</div>
+</article>
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>
