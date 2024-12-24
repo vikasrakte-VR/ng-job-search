@@ -4,3 +4,16 @@
     cursor: pointer;
   }
 }
+.search-bar {
+  margin: 0px 0px 16px 6px;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
