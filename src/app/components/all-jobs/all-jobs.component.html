@@ -1,7 +1,25 @@
-<div class="job-list">
-  <ng-container *ngIf="listOfAllJobs?.length">
-       <button (click)="showDetails(job)" *ngFor="let job of listOfAllJobs">
-         <app-job-card [data]="job" (toggleJobSelection)="toggleJobSelection($event)"></app-job-card>
-       </button>
-  </ng-container>
-</div>
+<article class="job-list-container">
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search jobs..."
+      [formControl]="searchControl"
+      class="search-input"
+    />
+  </div>
+  <div class="job-list">
+    <ng-container *ngIf="filteredJobs?.length; else noJobs">
+      <button
+        (click)="showDetails(job)"
+        *ngFor="let job of filteredJobs">
+        <app-job-card
+          [data]="job"
+          (toggleJobSelection)="toggleJobSelection($event)">
+        </app-job-card>
+      </button>
+    </ng-container>
+    <ng-template #noJobs>
+      <p>No jobs found for the current search criteria.</p>
+    </ng-template>
+  </div>
+</article>
