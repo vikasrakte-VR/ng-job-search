@@ -12,7 +12,7 @@
       <span *ngFor="let type of data.types">{{ type }}</span>
     </p>
   </div>
-  <div *ngIf="selection">
+  <div *ngIf="isSelectionOn">
     <button (click)="$event.stopPropagation();toggleFavorite()" class="btn-favorite">
        <img [src]="data.isFavorite ? 'assets/star.svg' : 'assets/star-outline.svg'">
    </button>

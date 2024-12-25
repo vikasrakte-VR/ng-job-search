@@ -12,7 +12,7 @@ import { JobDetail } from '../../interfaces/jobs.interface';
 export class JobCardComponent {
 
   @Input() data?: JobDetail;
-  @Input() selection:boolean = true;
+  @Input() isSelectionOn:boolean = true;
   @Input() isCompactCard: boolean = true;
   @Output() toggleJobSelection = new EventEmitter<JobDetail>();
 

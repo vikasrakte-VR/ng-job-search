@@ -1,7 +1,7 @@
 <div class="job-list">
   <ng-container *ngIf="listOfFavoriteJobs?.length; else notFound;">
        <button (click)="showDetails(job)" *ngFor="let job of listOfFavoriteJobs">
-         <app-job-card [data]="job" [selection]="false"></app-job-card>
+         <app-job-card [data]="job" [isSelectionOn]="false"></app-job-card>
        </button>
   </ng-container>
   <ng-template #notFound>

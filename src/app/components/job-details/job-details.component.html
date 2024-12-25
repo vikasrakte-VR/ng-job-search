@@ -7,7 +7,7 @@
 <article *ngIf="data; else loading">
   <div class="job-container">
     <div class="job-card">
-      <app-job-card [data]="data" [selection]="false" [isCompactCard]="false"></app-job-card>
+      <app-job-card [data]="data" [isSelectionOn]="false" [isCompactCard]="false"></app-job-card>
     </div>
     <div class="details">
         <p><strong>Publish date:</strong> {{ data.publishDate | date:'dd/MM/yyyy' }}</p>
