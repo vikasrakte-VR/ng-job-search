@@ -1,4 +1,4 @@
-import { Component, OnDestroy, WritableSignal } from '@angular/core';
+import { Component, OnDestroy, Signal } from '@angular/core';
 import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class JobsComponent implements OnDestroy {
   currentRoute: string = '';
-  favoriteJobs: WritableSignal<number[]> = this.jobsService.favoriteJobs;
+  favoriteJobs: Signal<number[]> = this.jobsService.favoriteJobs;
   private destroy$ = new Subject<void>();
 
   constructor(
