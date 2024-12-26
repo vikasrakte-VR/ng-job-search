@@ -18,8 +18,8 @@ import { JobCardComponent } from '../job-card/job-card.component';
 export class JobDetailsComponent implements OnInit, OnDestroy {
 
   id: string = '';
-  data: JobDetail | undefined;
-  jobDescription: SafeHtml | undefined;
+  data?: JobDetail;
+  jobDescription?: SafeHtml;
   private destroy$ = new Subject<void>();
 
   constructor(
